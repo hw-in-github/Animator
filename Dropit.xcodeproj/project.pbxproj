@@ -21,6 +21,8 @@
 		8C9941C519376DC500D922A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9941A719376DC500D922A0 /* UIKit.framework */; };
 		8C9941CD19376DC500D922A0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C9941CB19376DC500D922A0 /* InfoPlist.strings */; };
 		8C9941CF19376DC500D922A0 /* DropitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9941CE19376DC500D922A0 /* DropitTests.m */; };
+		8C9941DA193773CA00D922A0 /* DropitBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9941D9193773CA00D922A0 /* DropitBehavior.m */; };
+		8C9FAFF61938BD4A00500B69 /* DropitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9FAFF51938BD4A00500B69 /* DropitView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		8C9941CA19376DC500D922A0 /* DropitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropitTests-Info.plist"; sourceTree = "<group>"; };
 		8C9941CC19376DC500D922A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8C9941CE19376DC500D922A0 /* DropitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropitTests.m; sourceTree = "<group>"; };
+		8C9941D8193773CA00D922A0 /* DropitBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropitBehavior.h; sourceTree = "<group>"; };
+		8C9941D9193773CA00D922A0 /* DropitBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropitBehavior.m; sourceTree = "<group>"; };
+		8C9FAFF41938BD4A00500B69 /* DropitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropitView.h; sourceTree = "<group>"; };
+		8C9FAFF51938BD4A00500B69 /* DropitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropitView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +118,13 @@
 		8C9941A919376DC500D922A0 /* Dropit */ = {
 			isa = PBXGroup;
 			children = (
-				8C9941B219376DC500D922A0 /* DropitAppDelegate.h */,
-				8C9941B319376DC500D922A0 /* DropitAppDelegate.m */,
 				8C9941B519376DC500D922A0 /* Main.storyboard */,
 				8C9941B819376DC500D922A0 /* DropitViewController.h */,
 				8C9941B919376DC500D922A0 /* DropitViewController.m */,
+				8C9FAFF41938BD4A00500B69 /* DropitView.h */,
+				8C9FAFF51938BD4A00500B69 /* DropitView.m */,
+				8C9941D8193773CA00D922A0 /* DropitBehavior.h */,
+				8C9941D9193773CA00D922A0 /* DropitBehavior.m */,
 				8C9941BB19376DC500D922A0 /* Images.xcassets */,
 				8C9941AA19376DC500D922A0 /* Supporting Files */,
 			);
@@ -126,6 +134,8 @@
 		8C9941AA19376DC500D922A0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8C9941B219376DC500D922A0 /* DropitAppDelegate.h */,
+				8C9941B319376DC500D922A0 /* DropitAppDelegate.m */,
 				8C9941AB19376DC500D922A0 /* Dropit-Info.plist */,
 				8C9941AC19376DC500D922A0 /* InfoPlist.strings */,
 				8C9941AF19376DC500D922A0 /* main.m */,
@@ -250,7 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9FAFF61938BD4A00500B69 /* DropitView.m in Sources */,
 				8C9941BA19376DC500D922A0 /* DropitViewController.m in Sources */,
+				8C9941DA193773CA00D922A0 /* DropitBehavior.m in Sources */,
 				8C9941B419376DC500D922A0 /* DropitAppDelegate.m in Sources */,
 				8C9941B019376DC500D922A0 /* main.m in Sources */,
 			);
@@ -380,6 +392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dropit/Dropit-Prefix.pch";
 				INFOPLIST_FILE = "Dropit/Dropit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -393,6 +406,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dropit/Dropit-Prefix.pch";
 				INFOPLIST_FILE = "Dropit/Dropit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -457,6 +471,7 @@
 				8C9941D419376DC500D922A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C9941D519376DC500D922A0 /* Build configuration list for PBXNativeTarget "DropitTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +480,7 @@
 				8C9941D719376DC500D922A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
